@@ -1,0 +1,29 @@
+Requirements:
+1. Java
+2. Maven
+3. Spring
+
+Features:
+1. Unit tests
+2. Updating postal codes' coordinates
+3. Request logging
+4. Authentication of the service
+
+Choices:
+1. Spring Boot vs Spring --> Spring Boot ofc
+1b. Parent pom or no parent --> doesn't matter in this scenario. So no parent pom.
+2. Rest or hateoas --> Rest, because too basic and never gonna change the api.
+3. Database or Csv --> Database, I already downloaded the sql save query.
+   I don't want to work with Java FileReaders.
+3b. MySql or Embedded --> Embedded. Easier to configure and run. Most xp with H2.
+4. RepositoryRestResource vs RestController -> RestController. I don't need the save crud operation.
+   And I don't know how to remove that from RepositoryRestResource.
+
+Feature Choices:
+1. Unit tests -> Spring Boot 1 Unit Test, 1 Integration Test, 1 Mock test.
+2. Updating postal codes' coordinates -- (NOT DONE)
+3. Logging framework --> Spring Boot logging File + console.
+4. Authenticate --> Do both Http Basic encryption + Login with Spring Security (NOT DONE)
+
+Result:
+A runnable uber-jar.
